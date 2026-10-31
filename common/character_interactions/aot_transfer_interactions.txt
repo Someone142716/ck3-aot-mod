@@ -1,0 +1,111 @@
+﻿aot_devour_shifter_interaction = {
+	category = interaction_category_prison
+	icon = icon_dead
+	interface_priority = 110
+	desc = aot_devour_shifter_interaction_desc
+
+	is_shown = {
+		NOT = { scope:actor = scope:recipient }
+		scope:recipient = {
+			is_imprisoned_by = scope:actor
+			aot_is_titan_shifter = yes
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:actor = {
+			age >= 12
+			aot_can_receive_titan_power_trigger = yes
+		}
+	}
+
+	auto_accept = yes
+
+	on_accept = {
+		aot_devour_shifter_effect = {
+			EATER = scope:actor
+			VICTIM = scope:recipient
+		}
+	}
+
+	ai_targets = {
+		ai_recipients = prisoners
+	}
+	ai_frequency = 12
+
+	ai_will_do = {
+		base = 50
+		ai_value_modifier = {
+			ai_boldness = 0.5
+			ai_compassion = -0.5
+		}
+		modifier = {
+			add = -75
+			scope:actor = { is_close_family_of = scope:recipient }
+		}
+	}
+}
+
+aot_offer_titan_power_interaction = {
+	category = interaction_category_friendly
+	icon = icon_dead
+	interface_priority = 60
+	desc = aot_offer_titan_power_interaction_desc
+
+	is_shown = {
+		NOT = { scope:actor = scope:recipient }
+		scope:actor = { aot_is_titan_shifter = yes }
+		scope:recipient = {
+			OR = {
+				is_courtier_of = scope:actor
+				is_close_family_of = scope:actor
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:actor = { is_imprisoned = no }
+		scope:recipient = {
+			is_imprisoned = no
+			age >= 12
+			aot_can_receive_titan_power_trigger = yes
+		}
+	}
+
+	auto_accept = yes
+
+	on_accept = {
+		aot_devour_shifter_effect = {
+			EATER = scope:recipient
+			VICTIM = scope:actor
+		}
+	}
+
+	ai_targets = {
+		ai_recipients = family
+	}
+	ai_targets = {
+		ai_recipients = courtiers
+	}
+	ai_frequency = 6
+	
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = 50
+			scope:actor = { has_character_flag = aot_curse_final_year }
+		}
+		modifier = {
+			add = 50
+			scope:actor = { has_character_flag = aot_curse_final_year }
+			scope:actor.primary_heir ?= scope:recipient
+		}
+		modifier = {
+			add = 25
+			scope:actor = {
+				has_character_flag = aot_curse_final_year
+				is_close_family_of = scope:recipient
+			}
+		}
+	}
+}

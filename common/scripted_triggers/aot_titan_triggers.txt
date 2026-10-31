@@ -1,0 +1,13 @@
+﻿aot_is_titan_shifter = {
+	OR = {
+		has_trait = aot_founding_titan
+		has_trait = aot_attack_titan
+		has_trait = aot_colossal_titan
+		has_trait = aot_armored_titan
+		has_trait = aot_female_titan
+		has_trait = aot_beast_titan
+		has_trait = aot_cart_titan
+		has_trait = aot_jaw_titan
+		has_trait = aot_war_hammer_titan
+	}
+}

@@ -1,0 +1,105 @@
+﻿aot_transfer_titan_trait_effect = {
+	if = {
+		limit = {
+			scope:aot_old_holder = { has_trait = $TITAN$ }
+		}
+		scope:aot_old_holder = { remove_trait = $TITAN$ }
+		scope:aot_new_holder = {
+			aot_grant_titan_power_effect = { TITAN = $TITAN$ }
+		}
+	}
+}
+
+aot_transfer_all_titan_powers_effect = {
+	aot_transfer_titan_trait_effect = { TITAN = aot_founding_titan }
+	aot_transfer_titan_trait_effect = { TITAN = aot_attack_titan }
+	aot_transfer_titan_trait_effect = { TITAN = aot_colossal_titan }
+	aot_transfer_titan_trait_effect = { TITAN = aot_armored_titan }
+	aot_transfer_titan_trait_effect = { TITAN = aot_female_titan }
+	aot_transfer_titan_trait_effect = { TITAN = aot_beast_titan }
+	aot_transfer_titan_trait_effect = { TITAN = aot_cart_titan }
+	aot_transfer_titan_trait_effect = { TITAN = aot_jaw_titan }
+	aot_transfer_titan_trait_effect = { TITAN = aot_war_hammer_titan }
+}
+
+aot_devour_shifter_effect = {
+	$VICTIM$ = { save_scope_as = aot_old_holder }
+	$EATER$ = { save_scope_as = aot_new_holder }
+	aot_transfer_all_titan_powers_effect = yes
+	$VICTIM$ = {
+		death = {
+			death_reason = death_devoured_by_titan
+			killer = $EATER$
+		}
+	}
+}
+
+aot_pass_titan_to_infant_effect = {
+	if = {
+		limit = { has_trait = $TITAN$ }
+		save_scope_as = aot_old_holder
+		clear_saved_scope = aot_new_holder
+		random_living_character = {
+			limit = {
+				age < 2
+				aot_is_titan_shifter = no
+				aot_can_receive_titan_power_trigger = yes
+			}
+			weight = {
+				base = 1
+				modifier = {
+					add = 9
+					culture = scope:aot_old_holder.culture
+				}
+			}
+			save_scope_as = aot_new_holder
+		}
+		if = {
+			limit = {
+				NOT = { exists = scope:aot_new_holder }
+			}
+			random_living_character = {
+				limit = {
+					is_adult = no
+					aot_is_titan_shifter = no
+					aot_can_receive_titan_power_trigger = yes
+				}
+				weight = {
+					base = 1
+					modifier = {
+						add = 9
+						culture = scope:aot_old_holder.culture
+					}
+				}
+				save_scope_as = aot_new_holder
+			}
+		}
+		if = {
+			limit = { exists = scope:aot_new_holder }
+			aot_transfer_titan_trait_effect = { TITAN = $TITAN$ }
+			# Сообщить игроку, при чьём дворе оказался новый носитель
+			scope:aot_new_holder = {
+				if = {
+					limit = {
+						exists = liege
+						liege = { is_ai = no }
+					}
+					liege = { trigger_event = aot_transfer.0001 }
+				}
+			}
+			clear_saved_scope = aot_new_holder
+		}
+	}
+}
+
+aot_pass_all_titans_to_infants_effect = {
+	aot_pass_titan_to_infant_effect = { TITAN = aot_founding_titan }
+	aot_pass_titan_to_infant_effect = { TITAN = aot_attack_titan }
+	aot_pass_titan_to_infant_effect = { TITAN = aot_colossal_titan }
+	aot_pass_titan_to_infant_effect = { TITAN = aot_armored_titan }
+	aot_pass_titan_to_infant_effect = { TITAN = aot_female_titan }
+	aot_pass_titan_to_infant_effect = { TITAN = aot_beast_titan }
+	aot_pass_titan_to_infant_effect = { TITAN = aot_cart_titan }
+	aot_pass_titan_to_infant_effect = { TITAN = aot_jaw_titan }
+	aot_pass_titan_to_infant_effect = { TITAN = aot_war_hammer_titan }
+}

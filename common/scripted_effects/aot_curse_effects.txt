@@ -1,0 +1,28 @@
+﻿# Запустить проклятие (ничего не делает, если оно уже идёт)
+aot_start_curse_of_ymir_effect = {
+	if = {
+		limit = {
+			NOT = { has_variable = aot_ymir_curse_timer }
+		}
+		set_variable = {
+			name = aot_ymir_curse_timer
+			value = yes
+			years = 13
+		}
+		if = {
+			limit = { has_character_modifier = aot_curse_of_ymir_modifier }
+			remove_character_modifier = aot_curse_of_ymir_modifier
+		}
+		add_character_modifier = {
+			modifier = aot_curse_of_ymir_modifier
+			years = 13
+		}
+		trigger_event = { id = aot_curse.0002 years = 12 }
+		trigger_event = { id = aot_curse.0003 years = 13 days = 1 }
+	}
+}
+
+aot_grant_titan_power_effect = {
+	add_trait = $TITAN$
+	aot_start_curse_of_ymir_effect = yes
+}

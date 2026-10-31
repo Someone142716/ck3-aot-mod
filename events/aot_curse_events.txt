@@ -1,0 +1,57 @@
+﻿namespace = aot_curse
+
+# 0001 — скрытая проверка: носитель титана без запущенного проклятия
+# 0002 — предупреждение: остался год.
+# 0003 — смерть от Проклятия Имир.
+
+aot_curse.0001 = {
+	type = character_event
+	hidden = yes
+
+	trigger = {
+		aot_is_titan_shifter = yes
+		NOT = { has_variable = aot_ymir_curse_timer }
+	}
+
+	immediate = {
+		aot_start_curse_of_ymir_effect = yes
+	}
+}
+
+aot_curse.0002 = {
+	type = character_event
+	title = aot_curse.0002.t
+	desc = aot_curse.0002.desc
+	theme = skull
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+
+	trigger = {
+		aot_is_titan_shifter = yes
+		has_variable = aot_ymir_curse_timer
+	}
+
+	option = {
+		name = aot_curse.0002.a
+		add_stress = medium_stress_gain
+		add_character_flag = aot_curse_final_year
+	}
+}
+
+aot_curse.0003 = {
+	type = character_event
+	hidden = yes
+
+	trigger = {
+		aot_is_titan_shifter = yes
+		NOT = { has_variable = aot_ymir_curse_timer }
+	}
+
+	immediate = {
+		death = {
+			death_reason = death_curse_of_ymir
+		}
+	}
+}

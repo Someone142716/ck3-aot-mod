@@ -1,0 +1,9 @@
+﻿death_curse_of_ymir = {
+	public_knowledge = yes
+	icon = "death_natural.dds"
+}
+
+death_devoured_by_titan = {
+	public_knowledge = yes
+	icon = "death_murder.dds"
+}

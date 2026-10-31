@@ -1,0 +1,3 @@
+﻿aot_can_receive_titan_power_trigger = {
+	is_alive = yes
+}

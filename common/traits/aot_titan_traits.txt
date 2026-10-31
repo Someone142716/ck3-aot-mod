@@ -1,0 +1,190 @@
+﻿aot_founding_titan = {
+	physical = yes
+	shown_in_ruler_designer = no
+
+	diplomacy = 6
+	learning = 8
+	martial = 3
+	prowess = 35
+	health = 2
+
+	vassal_opinion = 30
+	general_opinion = 25
+	dread_baseline_add = 60
+	monthly_prestige = 5
+	monthly_lifestyle_xp_gain_mult = 0.5
+
+	ai_boldness = medium_positive_ai_value
+	ai_rationality = medium_positive_ai_value
+
+	icon = "gfx/interface/icons/traits/divine_blood.dds"
+}
+
+aot_attack_titan = {
+	physical = yes
+	shown_in_ruler_designer = no
+
+	martial = 6
+	prowess = 45
+	health = 2
+
+	advantage = 15
+	enemy_hard_casualty_modifier = 0.25
+	stress_gain_mult = -0.5
+	dread_baseline_add = 35
+	monthly_prestige = 3
+
+	ai_boldness = high_positive_ai_value
+	ai_energy = high_positive_ai_value
+
+	icon = "gfx/interface/icons/traits/berserker.dds"
+}
+
+aot_colossal_titan = {
+	physical = yes
+	shown_in_ruler_designer = no
+
+	martial = 5
+	prowess = 60
+	health = 1.5
+
+	advantage = 20
+	enemy_hard_casualty_modifier = 0.6
+	siege_phase_time = -0.6
+	dread_baseline_add = 80
+	monthly_prestige = 4
+
+	ai_boldness = high_positive_ai_value
+	ai_compassion = medium_negative_ai_value
+
+	icon = "gfx/interface/icons/traits/giant.dds"
+}
+
+aot_armored_titan = {
+	physical = yes
+	shown_in_ruler_designer = no
+
+	martial = 5
+	prowess = 50
+	health = 3
+
+	advantage = 10
+	hard_casualty_modifier = -0.5
+	knight_effectiveness_mult = 0.5
+	siege_phase_time = -0.3
+	dread_baseline_add = 45
+	monthly_prestige = 3
+
+	ai_boldness = medium_positive_ai_value
+
+	icon = "gfx/interface/icons/traits/physique_good_3.dds"
+}
+
+aot_female_titan = {
+	physical = yes
+	shown_in_ruler_designer = no
+
+	intrigue = 5
+	martial = 3
+	prowess = 45
+	health = 2
+
+	advantage = 10
+	owned_hostile_scheme_success_chance_add = 30
+	owned_scheme_secrecy_add = 40
+	enemy_hard_casualty_modifier = 0.2
+	dread_baseline_add = 35
+	monthly_prestige = 3
+
+	ai_boldness = medium_positive_ai_value
+	ai_honor = medium_negative_ai_value
+
+	icon = "gfx/interface/icons/traits/shieldmaiden.dds"
+}
+
+aot_beast_titan = {
+	physical = yes
+	shown_in_ruler_designer = no
+
+	martial = 7
+	learning = 5
+	prowess = 45
+	health = 2
+
+	advantage = 12
+	men_at_arms_maintenance = -0.4
+	enemy_hard_casualty_modifier = 0.4
+	dread_baseline_add = 50
+	monthly_prestige = 3
+
+	ai_rationality = high_positive_ai_value
+	ai_compassion = medium_negative_ai_value
+
+	icon = "gfx/interface/icons/traits/reaver.dds"
+}
+
+aot_cart_titan = {
+	physical = yes
+	shown_in_ruler_designer = no
+
+	stewardship = 5
+	martial = 4
+	prowess = 30
+	health = 2.5
+
+	advantage = 5
+	supply_duration = 1
+	movement_speed = 0.5
+	retreat_losses = -0.6
+	dread_baseline_add = 25
+	monthly_prestige = 2
+
+	ai_rationality = medium_positive_ai_value
+
+	icon = "gfx/interface/icons/traits/logistician.dds"
+}
+
+aot_jaw_titan = {
+	physical = yes
+	shown_in_ruler_designer = no
+
+	martial = 4
+	prowess = 50
+	health = 2
+
+	advantage = 12
+	pursue_efficiency = 0.8
+	raid_speed = 0.8
+	movement_speed = 0.3
+	enemy_hard_casualty_modifier = 0.3
+	dread_baseline_add = 35
+	monthly_prestige = 3
+
+	ai_boldness = high_positive_ai_value
+	ai_energy = medium_positive_ai_value
+
+	icon = "gfx/interface/icons/traits/wrathful.dds"
+}
+
+aot_war_hammer_titan = {
+	physical = yes
+	shown_in_ruler_designer = no
+
+	martial = 5
+	stewardship = 3
+	prowess = 50
+	health = 2
+
+	advantage = 12
+	siege_phase_time = -0.5
+	knight_effectiveness_mult = 0.4
+	controlled_province_advantage = 15
+	enemy_hard_casualty_modifier = 0.3
+	dread_baseline_add = 45
+	monthly_prestige = 3
+
+	ai_rationality = medium_positive_ai_value
+	ai_greed = medium_positive_ai_value
+
+	icon = "gfx/interface/icons/traits/education_martial_5.dds"
+}

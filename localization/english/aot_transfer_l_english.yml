@@ -1,0 +1,12 @@
+﻿l_english:
+ aot_devour_shifter_interaction: "Devour the Shifter"
+ aot_devour_shifter_interaction_desc: "Transform into a titan and devour [recipient.GetName], claiming every titan power [recipient.GetSheHe] holds. The new holder is bound by the Curse of Ymir."
+ aot_offer_titan_power_interaction: "Give Up Your Power"
+ aot_offer_titan_power_interaction_desc: "Let [recipient.GetName] devour you and inherit all your titan powers. You will die."
+
+ death_devoured_by_titan: "was devoured by a titan"
+ death_devoured_by_titan_killer: "was devoured by [TARGET_CHARACTER.GetName]"
+
+ aot_transfer.0001.t: "A New Inheritor"
+ aot_transfer.0001.desc: "With the death of [aot_old_holder.GetName], the titan's power did not vanish. It passed to a child: [aot_new_holder.GetName].\n\nFor now, the child has no idea what power sleeps within, or how few years remain."
+ aot_transfer.0001.a: "This child must be watched closely."

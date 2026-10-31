@@ -1,0 +1,3 @@
+﻿aot_curse_of_ymir_modifier = {
+	icon = health_negative
+}

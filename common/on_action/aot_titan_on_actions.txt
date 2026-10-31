@@ -1,0 +1,29 @@
+﻿on_game_start = {
+	on_actions = { aot_curse_on_game_start }
+}
+
+random_yearly_everyone_pulse = {
+	events = { aot_curse.0001 }
+}
+
+on_death = {
+	on_actions = { aot_transfer_on_death }
+}
+
+aot_transfer_on_death = {
+	trigger = {
+		aot_is_titan_shifter = yes
+	}
+	effect = {
+		aot_pass_all_titans_to_infants_effect = yes
+	}
+}
+
+aot_curse_on_game_start = {
+	effect = {
+		every_living_character = {
+			limit = { aot_is_titan_shifter = yes }
+			aot_start_curse_of_ymir_effect = yes
+		}
+	}
+}

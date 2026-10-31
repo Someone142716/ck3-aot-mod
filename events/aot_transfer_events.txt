@@ -1,0 +1,22 @@
+﻿namespace = aot_transfer
+
+# 0001 — уведомление: при вашем дворе родился новый носитель силы титана.
+
+aot_transfer.0001 = {
+	type = character_event
+	title = aot_transfer.0001.t
+	desc = aot_transfer.0001.desc
+	theme = skull
+	left_portrait = {
+		character = scope:aot_new_holder
+		animation = idle
+	}
+	right_portrait = {
+		character = scope:aot_old_holder
+		animation = idle
+	}
+
+	option = {
+		name = aot_transfer.0001.a
+	}
+}

@@ -1,0 +1,12 @@
+﻿l_russian:
+ aot_devour_shifter_interaction: "Пожрать носителя"
+ aot_devour_shifter_interaction_desc: "Обратиться в титана и съесть [recipient.GetName], забрав все силы титанов, которыми [recipient.GetSheHe] владеет. Новый носитель получает Проклятие Имир."
+ aot_offer_titan_power_interaction: "Отдать свою силу"
+ aot_offer_titan_power_interaction_desc: "Позволить [recipient.GetName] съесть вас и унаследовать все ваши силы титанов. Вы погибнете."
+
+ death_devoured_by_titan: "[Select_CString(CHARACTER.IsFemale, 'съедена', 'съеден' )] титаном"
+ death_devoured_by_titan_killer: "[Select_CString(CHARACTER.IsFemale, 'съедена', 'съеден' )] титаном — [TARGET_CHARACTER.GetName]"
+
+ aot_transfer.0001.t: "Новый носитель"
+ aot_transfer.0001.desc: "Со смертью [aot_old_holder.GetName] сила титана не исчезла. Она перешла к ребёнку — [aot_new_holder.GetName].\n\nРебёнок пока даже не подозревает, какая сила в нём дремлет и сколько лет ему отмерено."
+ aot_transfer.0001.a: "За этим ребёнком нужно присматривать."
